@@ -23,4 +23,12 @@ public class ProjectService {
     public Optional<Project> getProjectById(long projectId) {
         return projectRepository.findById(projectId);
     }
+
+    public Project saveProject(Project project) {
+        return projectRepository.save(project);
+    }
+
+    public void deleteProject(long id) {
+        projectRepository.deleteById(id);
+    }
 }
